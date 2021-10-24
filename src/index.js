@@ -3,7 +3,7 @@ const dayOfTheWeek = (date = new Date()) => {
     "Sunday",
     "Monday",
     "Tuesday",
-    "Weednesday",
+    "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
@@ -11,8 +11,6 @@ const dayOfTheWeek = (date = new Date()) => {
 
   return days[date.getDay()];
 };
-
-console.log("hello");
 
 try {
   document.getElementById("day").innerText = dayOfTheWeek();
