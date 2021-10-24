@@ -12,6 +12,8 @@ const dayOfTheWeek = (date = new Date()) => {
   return days[date.getDay()];
 };
 
+console.log("hello");
+
 try {
   document.getElementById("day").innerText = dayOfTheWeek();
 } catch (err) {}
