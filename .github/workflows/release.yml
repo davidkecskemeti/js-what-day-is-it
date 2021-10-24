@@ -1,0 +1,11 @@
+name: Version Release
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+  
+  publish:
+    needs: build
