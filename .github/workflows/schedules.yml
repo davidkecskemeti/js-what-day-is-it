@@ -1,16 +1,16 @@
-name: Export Firestore database
+# name: Export Firestore database
 
-on:
-    schedule:
-        - cron: '0 0 * * *'
+# on:
+#     schedule:
+#         - cron: '0 0 * * *'
 
-jobs:
-    backup:
-        runs-on: ubuntu-latest
-        steps:
-        - uses: GoogleCouldPlatform/github-actions/setup-gcloud@master
-          with:
-            service_account_key: ${{ secrects.GCP_SA_KEY }}
-            export_default_credentials: true 
-        - run: gcloud config set project $PROJECT_ID
-        - run: gcloud firestore export $BUCKET
+# jobs:
+#     backup:
+#         runs-on: ubuntu-latest
+#         steps:
+#         - uses: GoogleCouldPlatform/github-actions/setup-gcloud@master
+#           with:
+#             service_account_key: ${{ secrects.GCP_SA_KEY }}
+#             export_default_credentials: true 
+#         - run: gcloud config set project $PROJECT_ID
+#         - run: gcloud firestore export $BUCKET
